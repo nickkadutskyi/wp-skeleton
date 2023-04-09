@@ -1,0 +1,32 @@
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> wordpress ###
+/public-wp/*
+!/public-wp/uploads
+/public-wp/uploads/*
+!/public-wp/uploads/.gitignore
+/src/cache/*
+!/src/cache/.gitignore
+/src/upgrade/*
+!/src/upgrade/.gitignore
+/src/WordPressContent/plugins/composer-vendor-*
+/src/WordPressContent/plugins/wp-default-*
+/src/WordPressContent/themes/wp-default-*
+###< wordpress ###
+
+###> dev environtment ###
+.idea
+.vagrant
+.DS_Store
+.php-version
+*.log
+###< dev environtment ###

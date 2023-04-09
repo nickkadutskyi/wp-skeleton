@@ -1,0 +1,10 @@
+path: "public-wp"
+user: null
+core update:
+  locale: "en_US"
+core download:
+  locale: "en_US"
+  version: 6.2
+disabled_commands:
+  - db drop
+  - plugin install

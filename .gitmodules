@@ -1,0 +1,3 @@
+[submodule "src/WordPressContent/themes/powder"]
+	path = src/WordPressContent/themes/powder
+	url = git@github.com:bgardner/powder.git

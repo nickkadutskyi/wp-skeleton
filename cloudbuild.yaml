@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: Update production server
+  entrypoint: /bin/sh
+  args:
+    - '-c'
+    - |
+      set -x && \
+      gcloud compute ssh instance-1 --zone=us-west1-b --command='sudo -H -u nick /bin/sh /var/www/project-name/scripts/pull.sh'
+# TODO point to your own project and instance on production
