@@ -31,7 +31,7 @@ for d in public-wp/wp-content/plugins/*/ ; do
     mv "$d" "$PLUGIN_DEST"
 done
 mv "$WP_DIR/wp-content/plugins/hello.php" "$CONTENT_DIR/plugins/${WP_DEFAULT_PREFIX}hello.php"
-ln -sf ../src/WordPressContent public-wp/content
+ln -sfhn ../src/WordPressContent public-wp/content
 echo "$CURRENT_VERSION to $NEW_VERSION"
 echo "$UPDATE_RESULT"
 echo "$UPDATE_DB_RESULT"

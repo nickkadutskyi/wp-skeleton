@@ -1,5 +1,6 @@
 #!/bin/bash
-cd /var/www/marketing-site
+# TODO set a path to your project root
+cd /var/www/project-name
 
 #CURRENT_COMMIT_HASH=$(git rev-parse HEAD)
 
@@ -26,8 +27,5 @@ APP_ENV=prod APP_DEBUG=0 php bin/console cache:clear
 
 # Download current version of WP core
 scripts/wp-install.sh
-# TODO point to your own project on the server
-ln -s /var/www/project-name/src/WordPressContent /var/www/project-name/public-wp/content
 sudo chown -R nick:www-data ./*
-
 sudo service apache2 restart

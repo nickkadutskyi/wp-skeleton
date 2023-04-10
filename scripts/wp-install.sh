@@ -35,7 +35,7 @@ done
 if [ -f "$WP_DIR/wp-content/plugins/hello.php" ]; then
   mv "$WP_DIR/wp-content/plugins/hello.php" "$CONTENT_DIR/plugins/${WP_DEFAULT_PREFIX}hello.php"
 fi
-ln -sf ../src/WordPressContent public-wp/content
+ln -sfhn ../src/WordPressContent public-wp/content
 echo "Installed $CURRENT_VERSION"
 echo "$INSTALL_RESULT"
 
