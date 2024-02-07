@@ -4,6 +4,12 @@ Project starter for WordPress site
 - Symfony is used solely because of its [secrets management feature](https://symfony.com/doc/current/configuration/secrets.html)
 - WordPress core files are always separate from wp-content and plugins and are managed by WP-CLI
 
+## Initiate
+```bash
+# Creates Symfony Vault encription key and sets WP salts for prod and local
+scripts/initial.sh
+```
+
 ## Development
 ```bash
 # Install the project
@@ -13,14 +19,14 @@ composer install
 git submodule update --init --recursive
 
 # Runs installation script (basically downloads WordPress core files of the version specified in wp-cli.yml)
-scripts/install.sh
+scripts/wp-install.sh
 
 ```
 
 ## Update
 ```bash
 # 1. Updates to the latest version (provide any wp core update options to modify update process)
-scripts/update.sh
+scripts/wp-update.sh
 
 # 2. If updated wp-cli.yml will be updated to with the newer version for install.sh script to consider.
 
