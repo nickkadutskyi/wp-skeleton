@@ -4,7 +4,7 @@ core update:
   locale: "en_US"
 core download:
   locale: "en_US"
-  version: 6.2
+  version: 6.4.3
 disabled_commands:
   - db drop
   - plugin install
