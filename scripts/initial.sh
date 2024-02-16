@@ -2,7 +2,8 @@
 APP_RUNTIME_ENV=prod php bin/console secrets:generate-keys
 
 function store_in_vault() {
-  echo $(cat wp-config.php | sed -n "s/^.*'${1}', '\(.*\)'.*$/\1/p") | APP_RUNTIME_ENV=prod php bin/console secrets:set ${1} -
+  KEY_VALUE="$(cat wp-config.php | sed -n "s/^.*'${1}', '\(.*\)'.*$/\1/p")" 
+  APP_RUNTIME_ENV=prod php bin/console secrets:set ${1} <<< ${KEY_VALUE}
 }
 
 function store_in_env() {
