@@ -30,3 +30,7 @@
 .php-version
 *.log
 ###< dev environtment ###
+
+.devenv
+.direnv
+nix/.env
