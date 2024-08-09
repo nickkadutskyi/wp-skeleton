@@ -16,10 +16,11 @@ for d in public-wp/wp-content/themes/*/ ; do
   if [ -d "$d" ]; then
     THEME_NAME=$(basename "$d")
     THEME_DEST="$CONTENT_DIR/themes/$WP_DEFAULT_PREFIX$THEME_NAME"
-    if [ -d "$THEME_DEST" ]; then
-      rm -rf "$THEME_DEST"
-    fi
-    mv "$d" "$THEME_DEST"
+#    if [ -d "$THEME_DEST" ]; then
+#      rm -rf "$THEME_DEST"
+#    fi
+#    mv "$d" "$THEME_DEST"
+    rm -rf "$d"
   fi
 done
 for d in public-wp/wp-content/plugins/*/ ; do

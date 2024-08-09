@@ -24,6 +24,7 @@
 /src/WordPressContent/plugins/wp-default-*
 /src/WordPressContent/mu-plugins/wp-default-*
 /src/WordPressContent/themes/wp-default-*
+/src/WordPressContent/themes/composer-vendor-*
 ###< wordpress ###
 
 ###> dev environtment ###
