@@ -18,8 +18,11 @@
 !/src/cache/.gitignore
 /src/upgrade/*
 !/src/upgrade/.gitignore
+# Install pluings and themer via composer from wpackagist repo while add custom plugins and themes
 /src/WordPressContent/plugins/composer-vendor-*
+/src/WordPressContent/mu-plugins/composer-vendor-*
 /src/WordPressContent/plugins/wp-default-*
+/src/WordPressContent/mu-plugins/wp-default-*
 /src/WordPressContent/themes/wp-default-*
 ###< wordpress ###
 

@@ -41,11 +41,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1714390914,
-        "narHash": "sha256-W5DFIifCjGYJXJzLU3RpqBeqes4zrf0Sr/6rwzTygPU=",
+        "lastModified": 1721761939,
+        "narHash": "sha256-q/ERT4Ui315opFz4h4+BsJ/zrTYdXkwq13vvrpL+KzM=",
         "owner": "cachix",
         "repo": "devenv",
-        "rev": "34e6461fd76b5f51ad5f8214f5cf22c4cd7a196e",
+        "rev": "8c115a9222133af25fa08330982c4ceae9e24563",
         "type": "github"
       },
       "original": {
@@ -358,15 +358,15 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1714753352,
-        "narHash": "sha256-Lgfkq4vAdN1ulKAhAoPorJE1Bf7xy38H5QYDOt7Vnf4=",
-        "owner": "nickkadutskyi",
+        "lastModified": 1720691436,
+        "narHash": "sha256-ECgcdTCu2tP3eMd8/Tanf8ZP7so5KXqY0GR8UaFH7bg=",
+        "owner": "fossar",
         "repo": "nix-phps",
-        "rev": "aa8b865c0d92ece7f95496f7adca5f1944a7daaf",
+        "rev": "5c2a9bf0246b7f38b7ca737f0f1f36d5b45ae15a",
         "type": "github"
       },
       "original": {
-        "owner": "nickkadutskyi",
+        "owner": "fossar",
         "repo": "nix-phps",
         "type": "github"
       }

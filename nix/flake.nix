@@ -6,9 +6,7 @@
     devenv.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  # Packge that provides PHP 5.6
-  # inputs.phps.url = "github:fossar/nix-phps";
-  inputs.phps.url = "github:nickkadutskyi/nix-phps";
+  inputs.phps.url = "github:fossar/nix-phps";
   inputs.phps.inputs = { nixpkgs.follows = "nixpkgs"; };
 
 
@@ -37,7 +35,7 @@
             # VirtualHost Configuration
             vhostVars = {
               DocumentRoot = config.env.VHOST_DOCUMENT_ROOT or (devenvRoot + "/public-wp");
-              ServerName = ( config.env.VHOST_SERVER_NAME or "wpskeleton.test" );
+              ServerName = (config.env.VHOST_SERVER_NAME or "wpskeleton.test");
               Root = config.env.VHOST_ROOT or "/etc/apache2/other";
             };
             # TODO make it dynamic
@@ -120,7 +118,7 @@
 
                   # SSL Certificate for vhost
                   certificates = [
-                  ServerName
+                    ServerName
                   ];
 
                   # Adds vhost to built-in Apache server

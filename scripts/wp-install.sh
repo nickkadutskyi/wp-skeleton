@@ -3,7 +3,7 @@ WP_DIR="./public-wp"
 CONTENT_DIR="./src/WordPressContent"
 WP_DEFAULT_PREFIX="wp-default-"
 if [ ! -d "$WP_DIR" ]; then
-  echo "Not in project root"
+  echo "Not in project root. Navigate to project root and run scripts/wp-install.sh script again."
   exit 1
 fi
 if [ ! -e vendor/bin/wp ]; then
@@ -26,16 +26,13 @@ for d in public-wp/wp-content/plugins/*/ ; do
   if [ -d "$d" ]; then
     PLUGIN_NAME=$(basename "$d")
     PLUGIN_DEST="$CONTENT_DIR/plugins/$WP_DEFAULT_PREFIX$PLUGIN_NAME"
-    if [ -d "$PLUGIN_DEST" ]; then
       rm -rf "$PLUGIN_DEST"
-    fi
-    mv "$d" "$PLUGIN_DEST"
   fi
 done
 if [ -f "$WP_DIR/wp-content/plugins/hello.php" ]; then
-  mv "$WP_DIR/wp-content/plugins/hello.php" "$CONTENT_DIR/plugins/${WP_DEFAULT_PREFIX}hello.php"
+  rm "$WP_DIR/wp-content/plugins/hello.php"
 fi
 ln -sfhn ../src/WordPressContent public-wp/content
-echo "Installed $CURRENT_VERSION"
+echo "Currently installed WP core version: $CURRENT_VERSION"
 echo "$INSTALL_RESULT"
 

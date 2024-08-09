@@ -4,6 +4,16 @@
   "license": "gpl-2.0",
   "minimum-stability": "stable",
   "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
+    }
+  ],
   "require": {
     "php": ">=8.1",
     "ext-ctype": "*",
@@ -16,8 +26,7 @@
     "symfony/yaml": "6.4.*",
     "wp-cli/wp-cli": "dev-main",
     "wp-cli/wp-cli-bundle": "*",
-    "wp-sync-db/wp-sync-db": "dev-master",
-    "wp-sync-db/wp-sync-db-media-files": "^1.1"
+    "wpackagist-plugin/akismet": "dev-trunk"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
@@ -73,6 +82,9 @@
       "require": "6.4.*"
     },
     "installer-paths": {
+      "src/WordPressContent/mu-plugins/composer-vendor-{$name}/": [
+        "wpackagist-plugin/akismet"
+      ],
       "src/WordPressContent/plugins/composer-vendor-{$name}/": [
         "type:wordpress-plugin"
       ]
