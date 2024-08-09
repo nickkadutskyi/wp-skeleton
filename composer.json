@@ -82,9 +82,7 @@
       "require": "6.4.*"
     },
     "installer-paths": {
-      "src/WordPressContent/mu-plugins/composer-vendor-{$name}/": [
-        "wpackagist-plugin/akismet"
-      ],
+      "src/WordPressContent/mu-plugins/composer-vendor-{$name}/": [],
       "src/WordPressContent/plugins/composer-vendor-{$name}/": [
         "type:wordpress-plugin"
       ]
