@@ -33,6 +33,10 @@ if [ -f "$WP_DIR/wp-content/plugins/hello.php" ]; then
   rm "$WP_DIR/wp-content/plugins/hello.php"
 fi
 ln -sfhn ../src/WordPressContent public-wp/content
-echo "Currently installed WP core version: $CURRENT_VERSION"
+if [ -z "$CURRENT_VERSION" ]; then
+  echo "WordPress core is not installed"
+else
+  echo "Currently installed WordPress core version: $CURRENT_VERSION"
+fi
 echo "$INSTALL_RESULT"
 
