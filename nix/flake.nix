@@ -61,6 +61,11 @@
                     fi
                     echo "run 'devenv-custom up path:nix' to configure and start server."
                   '';
+                  process.process-compose = {
+                    version = "0.5";
+                    unix-socket = "${config.devenv.runtime}/pc.sock";
+                    tui = false;
+                  };
 
                   # MySQL Configuration
                   services.mysql.enable = true;
@@ -138,7 +143,15 @@
                      sudo apachectl restart
                   '';
                   process.after = ''
-                    echo "Clearing Vhost configuration"
+                    if [ "$(readlink -- "${vhostVars.Root}/${vhostVars.ServerName}.conf")" = "${vhostConfig}" ]; then
+                      echo "Clearing Vhost configuration"
+                      sudo rm ${vhostVars.Root}/${vhostVars.ServerName}.conf
+                    fi
+                    if [ "$(readlink -- "${vhostVars.Root}/${vhostVars.ServerName}-ssl.conf")" = "${vhostConfigSSL}" ]; then
+                      echo "Clearing SSL Vhost configuration"
+                      sudo rm ${vhostVars.Root}/${vhostVars.ServerName}-ssl.conf
+                    fi
+                     sudo apachectl restart
                   '';
 
                   # Adds Apache log tracker process
